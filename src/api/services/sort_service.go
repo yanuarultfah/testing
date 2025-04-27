@@ -1,6 +1,10 @@
 package services
 
-import "testing/src/api/utils/sort"
+import (
+	"fmt"
+	locationsprovider "testing/src/api/providers/locations_provider"
+	"testing/src/api/utils/sort"
+)
 
 const (
 	privateConst = "private"
@@ -22,6 +26,12 @@ func Sort(elements []int) {
 		return
 	}
 	sort.Sort(elements)
+	country, err := locationsprovider.GetCountry("AR")
+	if err != nil {
+		return
+	}
+
+	fmt.Println(country.Name)
 }
 
 // func BubbleShort(elements []int) {

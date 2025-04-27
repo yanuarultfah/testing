@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
-	locationsprovider "testing/src/api/providers/locations_provider"
+	"testing/src/api/app"
 )
 
 func main() {
-	country, err := locationsprovider.GetCountry("AR")
-	fmt.Println(err)
-	fmt.Println(country)
+	// country, err := locationsprovider.GetCountry("AR")
+	// fmt.Println(err)
+	// fmt.Println(country)
+	app.StartApp()
 }
